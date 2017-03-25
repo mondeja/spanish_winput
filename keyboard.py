@@ -210,7 +210,7 @@ def release(*args):
 def change_window(num):
     '''
     Cambia la ventana activa pulsando alt + tab
-    num es el número de veces que se pulsa
+    num es el nÃºmero de veces que se pulsa
     '''
     win32api.keybd_event(VK_CODE['alt'], 0,0,0)
     win32api.keybd_event(VK_CODE['tab'], 0,0,0)
@@ -228,14 +228,14 @@ def change_window(num):
 
 def typer(string=None, pause=0, *args):
     ''' pause es el tiempo de espera entre pulsaciones '''
-    latin = ['¡', "'", 'á', 'é', 'í', 'ó', 'ú']
+    latin = ['Â¡', "'", 'Ã¡', 'Ã©', 'Ã­', 'Ã³', 'Ãº']
     
     for i in string:
         if i in latin:
-            clipboard = pyper.paste() # Guardamos lo que teníamos en el clipboard              
+            clipboard = pyper.paste() # Guardamos lo que tenÃ­amos en el clipboard              
             pyper.copy(i)
             ctrl_v()
-            if len(clipboard) > 0: # Si había algo volvemos a colocarlo en el clipboard
+            if len(clipboard) > 0: # Si habÃ­a algo volvemos a colocarlo en el clipboard
                 pyper.copy(clipboard)
         
         elif i == ' ':
@@ -271,14 +271,14 @@ def typer(string=None, pause=0, *args):
             win32api.keybd_event(VK_CODE['left_shift'],0 ,win32con.KEYEVENTF_KEYUP ,0)
             win32api.keybd_event(VK_CODE['['],0 ,win32con.KEYEVENTF_KEYUP ,0)
 
-        elif i == 'ç':
+        elif i == 'Ã§':
             win32api.keybd_event(VK_CODE['left_shift'], 0,0,0)
             win32api.keybd_event(VK_CODE['/'], 0,0,0)
             time.sleep(.05)
             win32api.keybd_event(VK_CODE['left_shift'],0 ,win32con.KEYEVENTF_KEYUP ,0)
             win32api.keybd_event(VK_CODE['/'],0 ,win32con.KEYEVENTF_KEYUP ,0)
             
-        elif i == 'Ç':
+        elif i == 'Ã‡':
             win32api.keybd_event(VK_CODE['left_shift'], 0,0,0)
             win32api.keybd_event(VK_CODE['/'], 0,0,0)
             time.sleep(.05)
@@ -292,14 +292,14 @@ def typer(string=None, pause=0, *args):
             win32api.keybd_event(VK_CODE['left_shift'],0 ,win32con.KEYEVENTF_KEYUP ,0)
             win32api.keybd_event(VK_CODE['.'],0 ,win32con.KEYEVENTF_KEYUP ,0)
 
-        elif i == '¿':
+        elif i == 'Â¿':
             win32api.keybd_event(VK_CODE['left_shift'], 0,0,0)
             win32api.keybd_event(VK_CODE[']'], 0,0,0)
             time.sleep(.05)
             win32api.keybd_event(VK_CODE['left_shift'],0 ,win32con.KEYEVENTF_KEYUP ,0)
             win32api.keybd_event(VK_CODE[']'],0 ,win32con.KEYEVENTF_KEYUP ,0)
 
-        elif i == '·':
+        elif i == 'Â·':
             win32api.keybd_event(VK_CODE['left_shift'], 0,0,0)
             win32api.keybd_event(VK_CODE['3'], 0,0,0)
             time.sleep(.05)
@@ -369,7 +369,7 @@ def typer(string=None, pause=0, *args):
             win32api.keybd_event(VK_CODE['left_shift'],0 ,win32con.KEYEVENTF_KEYUP ,0)
             win32api.keybd_event(VK_CODE['0'],0 ,win32con.KEYEVENTF_KEYUP ,0)
 
-        elif i == 'Ñ':
+        elif i == 'Ã‘':
             win32api.keybd_event(VK_CODE['left_shift'], 0,0,0)
             win32api.keybd_event(VK_CODE['`'], 0,0,0)
             time.sleep(.05)
